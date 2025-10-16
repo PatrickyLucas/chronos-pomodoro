@@ -2,10 +2,17 @@ import { PlayCircleIcon } from 'lucide-react';
 import { Cycles } from '../Cycles';
 import { DefaultButton } from '../DefaultButton';
 import { DefaultInput } from '../DefaultInput';
+import type React from 'react';
 
 export function MainForm() {
+  function handleCreatedNewTask(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    console.log('DEU CERTO');
+  }
+
   return (
-    <form className='form' action=''>
+    <form onSubmit={handleCreatedNewTask} className='form' action=''>
       <div className='formRow'>
         <DefaultInput
           labelText='task:'
