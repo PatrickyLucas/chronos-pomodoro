@@ -5,9 +5,9 @@ import {
   SettingsIcon,
   SunIcon,
 } from 'lucide-react';
-import styles from './styles.module.css';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { RouterLink } from '../RouterLink';
+import styles from './styles.module.css';
 
 type AvailableThemes = 'dark' | 'light';
 

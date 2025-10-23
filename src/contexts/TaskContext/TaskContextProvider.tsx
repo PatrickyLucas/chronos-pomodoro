@@ -1,11 +1,11 @@
 import { useEffect, useReducer, useRef } from 'react';
+import type { TaskStateModel } from '../../models/TaskStateModel';
+import { loadBeep } from '../../utils/loadBeep';
+import { TimerWorkerManager } from '../../workers/TimerWorkerManager';
 import { TaskContext } from './TaskContext';
 import { initialTaskState } from './initialTaskState';
-import { taskReducer } from './taskReducer';
-import { TimerWorkerManager } from '../../workers/TimerWorkerManager';
 import { TaskActionTypes } from './taskActions';
-import { loadBeep } from '../../utils/loadBeep';
-import type { TaskStateModel } from '../../models/TaskStateModel';
+import { taskReducer } from './taskReducer';
 
 type TaskContextProviderProps = {
   children: React.ReactNode;
