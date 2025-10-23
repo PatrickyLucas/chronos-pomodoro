@@ -95,11 +95,11 @@ chronos-pomodoro/
 
 1. **Clone o repositório:**
 
-   ```bash
-   git clone https://github.com/PatrickyLucas/chronos-pomodoro.git
-   cd chronos-pomodoro
+```bash
+git clone https://github.com/PatrickyLucas/chronos-pomodoro.git
+cd chronos-pomodoro
 
-   ```
+```
 
 2. **Instale as dependências:**
 
