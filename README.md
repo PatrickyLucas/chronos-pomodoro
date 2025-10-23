@@ -157,3 +157,7 @@ Em seguida, abra a URL gerada pelo Vite (geralmente http://localhost:5173).
 
 Este projeto é de **uso educacional** e faz parte do aprendizado no **curso de
 React JS 19 e Next.js 15**, ministrado por **Luiz Otávio Miranda**.
+
+---
+
+<p align="center"><em>Desenvolvido com 💚</em></p>
