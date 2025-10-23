@@ -5,11 +5,12 @@ import { Container } from '../../components/Container';
 import { DefaultButton } from '../../components/DefaultButton';
 import { DefaultInput } from '../../components/DefaultInput';
 import { Heading } from '../../components/Heading';
+import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
 import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
 import { MainTemplate } from '../../templates/MainTemplate';
 
 export function Settings() {
-  const { state } = useTaskContext();
+  const { state, dispatch } = useTaskContext();
   const workTimeInput = useRef<HTMLInputElement>(null);
   const shortBreakTimeInput = useRef<HTMLInputElement>(null);
   const longBreakTimeInput = useRef<HTMLInputElement>(null);
@@ -47,7 +48,15 @@ export function Settings() {
       return;
     }
 
-    console.log('SALVAR');
+    dispatch({
+      type: TaskActionTypes.CHANGE_SETTINGS,
+      payload: {
+        workTime,
+        shortBreakTime,
+        longBreakTime,
+      },
+    });
+    showMessage.success('Configurações salvas');
   }
 
   return (
